@@ -2,7 +2,9 @@
 # Loads in dataset "household_power_consumption.txt",
 # subsets the data collected on 2007-02-01 and 2007-02-02,
 # parses the dates and times into a single DateTime
-# variable, creates line plots of the Energy Sub Meters vs. time
+# variable, creates 4 separate line plots (mostly using the
+# methodology of plot1.R, plot2.R and plot3.R, places these
+# in a 2x2 grid using the base R par() function,
 # and exports a 480x480 px png file of this plot.
 
 # This script assumes that the plot1.R file and the 
@@ -60,10 +62,6 @@ legend('topright', c("Sub Metering 1", "Sub Metering 2", "Sub Metering 3"),
 plot(subData$Timestamp, subData$Global_reactive_power, type="l",
     main = "Global Reactive Power vs. Time", xlab = "",
     ylab = "Reactive Power")
-
-
-
-
 
 
 
